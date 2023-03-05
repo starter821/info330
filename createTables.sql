@@ -1,5 +1,4 @@
--- Project Assignment 4: Database Implementation
--- Shiina
+-- Create necessary tables for project here
 
 drop table if exists 
 	users, item, ratings, movies,
