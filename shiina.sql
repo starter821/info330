@@ -79,7 +79,7 @@ create table series (
 );
 
 create table season (
-	itemTitle varchar(300) references series(itemTitle),
+	itemTitle varchar(300) UNIQUE references series(itemTitle),
 	seasonID smallint UNIQUE,
 	seasonTitle varchar(200),
 	description text,
@@ -87,7 +87,7 @@ create table season (
 );
 
 create table episodes (
-	itemTitle varchar(300) references series(itemTitle),
+	itemTitle varchar(300) UNIQUE references season(itemTitle),
 	episodeID smallint UNIQUE,
 	episodeTitle varchar(200),
 	description text,
