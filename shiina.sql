@@ -32,7 +32,7 @@ create table item (
 );
 
 -- Example: 'User XXX' 'has watched' the 'movie', titled 'XXX', and
--- 			rated it a 'thumbs up'.
+--          rated it a 'thumbs up'.
 create table ratings (
 	userID serial references users(userID),
 	itemTitle varchar(300),
