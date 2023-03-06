@@ -29,7 +29,7 @@ create table item (
 	-- Netlfix has over 27,000 genres due to some oddly specfic 
 	-- categorizations ("Critically-acclaimed Violent Crime Movies on Blu-ray")
 	-- so we limit the upper bound to 3 genres per item.
-	-- Genres can be null but genre1 cannot be null.
+	-- Genres 2 & 3 can be null but genre 1 cannot be null.
 	primaryLanguage varchar(200),
 	director varchar(200),
 	productionCompany varchar(200),
