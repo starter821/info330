@@ -8,7 +8,11 @@ create table users (
 	userID serial primary key,
 	email varchar(100) UNIQUE,
 	dateJoined date,
-	subscriptionType varchar(100),
+	subscriptionType varchar(100) check (
+		subscriptionType in (
+			'Basic with ads', 'Basic', 'Standard', 'Premium'
+		)
+	),
 	country varchar(100)
 );
 
