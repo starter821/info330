@@ -57,19 +57,19 @@
 -- series
 -- delete from series;
 
-insert into series
-values
-	('80020578', 'Breaking Bad',                    'Series', 'A high school chemistry teacher dying of cancer teams with a former student to secure his family’s future by manufacturing and selling crystal meth.'),
-	('80061343', 'BoJack Horseman',                 'Series', 'Meet the most beloved sitcom horse of the ’90s, 20 years later. He’s a curmudgeon with a heart of...not quite gold...but something like gold. Copper?'),
-	('81222255', 'First Love',                      'Series', 'Young, free and madly in love. As teenagers, the world was their oyster — but as adults, their lives seem dimmer, like a very important piece is missing.'),
-	('80212201', 'You',                             'Series', 'A dangerously charming, intensely obsessive young man goes to extreme measures to insert himself into the lives of those he is transfixed by.'),
-	('80236528', 'Outer Banks',                     'Series', 'On an island of haves and have-nots, teen John B enlists his three best friends to hunt for a legendary treasure linked to his father’s disappearance.'),
-	('81403033', 'Kleo',                            'Series', 'After the fall of the Berlin Wall, a former East German spy resolves to find out who betrayed her and why — and use her lethal skills to exact revenge.'),
-	('70291894', 'Barbie: Life in the Dreamhouse',  'Series', 'Join blond icon Barbie and her fabulous friends as their behind-the-scenes adventures are revealed in this animated Web series.'),
-	('81567044', 'Next in Fashion',                 'Series', 'Up-and-coming designers compete to impress expert judges, hoping to win career-changing prize money and a chance to become the next big thing in fashion.'),
-	('81589506', 'Physical 100',                    'Series', 'One hundred contestants in top physical shape compete in a series of grueling challenges to claim the honor — and cash reward — as the last one standing.'),
-	('70296632', 'Hunter X Hunter',                 'Series', 'To fulfill his dreams of becoming a legendary Hunter like his dad, a young boy must pass a rigorous examination and find his missing father.'),
-	('81012921', 'Inventing Anna',                  'Series', 'Audacious entrepreneur or con artist? A journalist chases down the story of Anna Delvey, who convinced New York’s elite she was a German heiress.');
+-- insert into series
+-- values
+-- 	('80020578', 'Breaking Bad',                    'Series', 'A high school chemistry teacher dying of cancer teams with a former student to secure his family’s future by manufacturing and selling crystal meth.'),
+-- 	('80061343', 'BoJack Horseman',                 'Series', 'Meet the most beloved sitcom horse of the ’90s, 20 years later. He’s a curmudgeon with a heart of...not quite gold...but something like gold. Copper?'),
+-- 	('81222255', 'First Love',                      'Series', 'Young, free and madly in love. As teenagers, the world was their oyster — but as adults, their lives seem dimmer, like a very important piece is missing.'),
+-- 	('80212201', 'You',                             'Series', 'A dangerously charming, intensely obsessive young man goes to extreme measures to insert himself into the lives of those he is transfixed by.'),
+-- 	('80236528', 'Outer Banks',                     'Series', 'On an island of haves and have-nots, teen John B enlists his three best friends to hunt for a legendary treasure linked to his father’s disappearance.'),
+-- 	('81403033', 'Kleo',                            'Series', 'After the fall of the Berlin Wall, a former East German spy resolves to find out who betrayed her and why — and use her lethal skills to exact revenge.'),
+-- 	('70291894', 'Barbie: Life in the Dreamhouse',  'Series', 'Join blond icon Barbie and her fabulous friends as their behind-the-scenes adventures are revealed in this animated Web series.'),
+-- 	('81567044', 'Next in Fashion',                 'Series', 'Up-and-coming designers compete to impress expert judges, hoping to win career-changing prize money and a chance to become the next big thing in fashion.'),
+-- 	('81589506', 'Physical 100',                    'Series', 'One hundred contestants in top physical shape compete in a series of grueling challenges to claim the honor — and cash reward — as the last one standing.'),
+-- 	('70296632', 'Hunter X Hunter',                 'Series', 'To fulfill his dreams of becoming a legendary Hunter like his dad, a young boy must pass a rigorous examination and find his missing father.'),
+-- 	('81012921', 'Inventing Anna',                  'Series', 'Audacious entrepreneur or con artist? A journalist chases down the story of Anna Delvey, who convinced New York’s elite she was a German heiress.');
 
 
 

@@ -86,7 +86,6 @@ create table season (
 	itemTitle varchar(300) UNIQUE references series(itemTitle),
 	seasonID smallint UNIQUE,
 	seasonTitle varchar(200),
-	description text,
 	primary key (itemTitle, seasonID, seasonTitle)
 );
 
@@ -99,5 +98,5 @@ create table episodes (
 	primary key (itemTitle, episodeID, episodeTitle)
 );
 
-select * from item;
+select * from season;
 
