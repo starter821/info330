@@ -2,14 +2,14 @@
 ## Repo for Project Assignments :smiley:
 
 ### createTables.sql
-Contains the code for creating the schemas
+&nbsp;&nbsp; Contains the code for creating the schemas
 
 ### editTables.sql
-Contains the code for inserting data into the schemas
+&nbsp;&nbsp; Contains the code for inserting data into the schemas
 
 ### writeQueries.sql
-Contians the code for query manipulation
+&nbsp;&nbsp; Contians the code for query manipulation
 
 ### projectAssignment4.sql
-The file to submit for assignment 4. Copy and paste material from other .sql files
+&nbsp;&nbsp; The file to submit for assignment 4. Copy and paste material from other .sql files
 as needed.
