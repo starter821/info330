@@ -1,5 +1,5 @@
 # Info330 Group 16
-## Project Assignments
+## Repo for Project Assignments :smiley:
 
 ### createTables.sql
 Contains the code for creating the schemas
