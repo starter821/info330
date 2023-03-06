@@ -1,7 +1,7 @@
 -- Create necessary tables for project here
 
 drop table if exists 
-	users, item, ratings, movies,
+	users, item, movieRatings, epRatings, movies,
 	series, season, episodes;
 
 create table users (
@@ -45,20 +45,6 @@ create table item (
 	UNIQUE (itemTitle, itemType)
 );
 
--- Example: 'User XXX' 'has watched' the 'movie', titled 'XXX', and
---          rated it a 'thumbs up'.
-create table ratings (
-	userID serial references users(userID),
-	itemTitle varchar(300),
-	itemType varchar(100),
-	watched boolean,
-	rating boolean,
-	-- rating true = thumbs up, rating false = thumbs down, null = no vote
-	primary key (userID, itemTitle),
-	foreign key (itemTitle, itemType)
-		references item(itemTitle, itemType)
-);
-
 create table movies (
 	EIDR serial primary key,
 	itemTitle varchar(300) UNIQUE,
@@ -82,6 +68,20 @@ create table series (
 		references item(itemTitle, itemType)
 );
 
+-- Example: 'User XXX' 'has watched' the 'movie', titled 'XXX', and
+--          rated it a 'thumbs up'.
+create table movieRatings (
+	userID serial references users(userID),
+	itemTitle varchar(300),
+	itemType varchar(100) check (itemType = 'Movie'),
+	watched boolean,
+	rating boolean,
+	-- rating true = thumbs up, rating false = thumbs down, null = no vote
+	primary key (userID, itemTitle),
+	foreign key (itemTitle, itemType)
+		references item(itemTitle, itemType)
+);
+
 create table season (
 	itemTitle varchar(300) UNIQUE references series(itemTitle),
 	seasonID smallint UNIQUE,
@@ -98,5 +98,21 @@ create table episodes (
 	primary key (itemTitle, episodeID, episodeTitle)
 );
 
-select * from season;
+-- Ratings for each episode of a series
+create table epRatings (
+	userID serial references users(userID),
+	itemTitle varchar(300),
+	itemType varchar(100) check (itemType = 'Series'),
+	seasonID smallint,
+	episodeID smallint UNIQUE,
+	watched boolean,
+	rating boolean,
+	-- rating true = thumbs up, rating false = thumbs down, null = no vote
+	primary key (userID, itemTitle, seasonID, episodeID),
+	foreign key (itemTitle, itemType)
+		references item(itemTitle, itemType)
+);
+
+
+select * from epRatings;
 

@@ -73,4 +73,4 @@
 
 
 
-select * from series;
+select * from users;
