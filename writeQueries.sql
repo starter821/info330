@@ -17,4 +17,9 @@ where email = 'shiinaaaa@email.com';
 
 
 -- Jiyoon's queries
--- (4) 
+
+-- (15) What is the percentage of premium subscriptions among users? (Netflix analyst)
+
+-- (20) What shows have maturity ratings that are appropriate for children? (customer)
+
+-- (21) What are some movies that Leonardo DiCaprio starred in? (customer)
