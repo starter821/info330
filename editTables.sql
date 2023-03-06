@@ -46,15 +46,20 @@
 -- movies
 -- delete from movies;
 
-insert into movies
-values
-	('80040810', 'The Dark Knight',             'Movie', '02:32:00', 'Batman, Lieutenant Gordon and District Attorney Harvey Dent go up against the Joker, a criminal mastermind in ghoulish makeup terrorizing Gotham City.'),
-	('70305956', 'This is Where I Leave You',   'Movie', '01:43:00', 'When their father dies, four siblings return home for a week, but mourning quickly takes a back seat to bickering and opportunistic backstabbing.'),
-	('80993401', 'Tara Vs. Bilal',              'Movie', '02:06:00', 'Sparks fly when vivacious yet sensitive Tara collides with reclusive charmer Bilal in this slice of life story set in a vibrant and diverse London.'),
-	('70295172', 'The Imitation Game',          'Movie', '01:53:00', 'During World War II, a mathematician leads a team of cryptanalysts as they work feverishly to break the Germans notorious Enigma code.'),
-	('70206672', 'The Hunger Games',            'Movie', '02:16:00', 'In a dystopian future, teens Katniss and Peeta are drafted for a televised event pitting young competitors against each other in a fight to the death.');
+-- insert into movies
+-- values
+-- 	('80040810', 'The Dark Knight',             'Movie', '02:32:00', 'Batman, Lieutenant Gordon and District Attorney Harvey Dent go up against the Joker, a criminal mastermind in ghoulish makeup terrorizing Gotham City.'),
+-- 	('70305956', 'This is Where I Leave You',   'Movie', '01:43:00', 'When their father dies, four siblings return home for a week, but mourning quickly takes a back seat to bickering and opportunistic backstabbing.'),
+-- 	('80993401', 'Tara Vs. Bilal',              'Movie', '02:06:00', 'Sparks fly when vivacious yet sensitive Tara collides with reclusive charmer Bilal in this slice of life story set in a vibrant and diverse London.'),
+-- 	('70295172', 'The Imitation Game',          'Movie', '01:53:00', 'During World War II, a mathematician leads a team of cryptanalysts as they work feverishly to break the Germans notorious Enigma code.'),
+-- 	('70206672', 'The Hunger Games',            'Movie', '02:16:00', 'In a dystopian future, teens Katniss and Peeta are drafted for a televised event pitting young competitors against each other in a fight to the death.');
 	
+-- series
+-- delete from series;
+
+-- insert into series
+-- values
+-- 	()
 
 
-
-select * from movies;
+select * from series;
