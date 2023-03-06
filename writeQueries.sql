@@ -2,13 +2,16 @@
 
 select * from users;
 
--- shiina
+-- shiina's queries
+
 --- (1) When does my subscription renew ? (customer)
----     Let user (me) be Shiina in perspective of the problem
+---     Let user ('my') be Shiina for the sake of the query
 select email, datejoined from users
 where email = 'shiinaaaa@email.com';
 
 --- (2) How many users in Japan watched 'the Imitation Game' ? (Netflix analyst)
 
---- (3) What episode did I leave off on for the 
+--- (3) What episode did I leave off on for the show 'Physical 100' ? (customer)
+---     Let user ('I') be Shiina for the sake of the query.
+---     Return the next episode to watch
 
