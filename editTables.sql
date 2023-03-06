@@ -7,16 +7,16 @@ delete from users;
 
 insert into users
 values
-	(872563419, 'shiinaaaa@email.com',				 	'07-22-2018', 'Standard',		'Japan'),
-	(443786521, 'jiyoooon@email.com',					'11-14-2016', 'Basic',			'Korea'),
-	(987654321, 'sungheeeee@email.com',				 	'03-08-2019', 'Basic with ads', 'Korea'),
-	(246801357, 'somenameidk@email.com',				'10-02-2017', 'Premium', 		'USA'),
-	(345678912, 'applesbananas@email.com',			 	'06-01-2015', 'Basic', 			'Japan'),
-	(769832145, 'oolongmilktea@email.com', 			 	'12-29-2020', 'Basic', 			'USA'),
-	(890120056, 'chairtable@email.com', 				'09-17-2018', 'Premium', 		'USA'),
-	(654739218, 'lmao@email.com', 					 	'01-25-2017', 'Basic with ads', 'USA'),
-	(321098765, 'catdogmouse@email.com', 				'04-11-2022', 'Basic', 			'Canada'),
-	(287487470, 'somesuperlongemailaddress@email.com', 	'08-07-2019', 'Premium', 		'Italy');
+	(872563419, 'shiinaaaa@email.com',                  '07-22-2018', 'Standard',       'Japan'),
+	(443786521, 'jiyoooon@email.com',                   '11-14-2016', 'Basic',          'Korea'),
+	(987654321, 'sungheeeee@email.com',                 '03-08-2019', 'Basic with ads', 'Korea'),
+	(246801357, 'somenameidk@email.com',                '10-02-2017', 'Premium',        'USA'),
+	(345678912, 'applesbananas@email.com',              '06-01-2015', 'Basic',          'Japan'),
+	(769832145, 'oolongmilktea@email.com',              '12-29-2020', 'Basic',          'USA'),
+	(890120056, 'chairtable@email.com',                 '09-17-2018', 'Premium',        'USA'),
+	(654739218, 'lmao@email.com',                       '01-25-2017', 'Basic with ads', 'USA'),
+	(321098765, 'catdogmouse@email.com',                '04-11-2022', 'Basic',          'Canada'),
+	(287487470, 'somesuperlongemailaddress@email.com',  '08-07-2019', 'Premium',        'Italy');
 
 -- item
 delete from item;
