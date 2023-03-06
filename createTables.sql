@@ -2,7 +2,8 @@
 
 drop table if exists 
 	users, item, movieRatings, epRatings, movies,
-	series, season, episodes;
+	series, season, episodes,
+	cast, productionCompany;
 
 create table users (
 	userID serial primary key,
@@ -112,6 +113,23 @@ create table epRatings (
 	foreign key (itemTitle, itemType)
 		references item(itemTitle, itemType)
 );
+
+create table cast (
+	stageName varchar(300),
+	name varchar(300),
+	itemTitle varchar(300),
+	itemType varchar(100),
+	role varchar(300),
+	primary key (stageName, name)
+	foreign key (itemTitle ,itemType) references item(itemTitle, itemType)
+);
+
+create table productionCompany (
+	name varchar(200) primary key,
+	DateFounded date
+);
+
+
 
 
 select * from epRatings;

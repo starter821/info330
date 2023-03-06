@@ -15,3 +15,6 @@ where email = 'shiinaaaa@email.com';
 ---     Let user ('I') be Shiina for the sake of the query.
 ---     Return the next episode to watch
 
+
+-- Jiyoon's queries
+-- (4) 
