@@ -40,7 +40,8 @@ values
 	('70291894', 'Barbie: Life in the Dreamhouse',  'Series',   'Kids',                 'Cartoons',                 'Comedies',             'English',   NULL,                      'Arc Productions',                  'TV-Y',    2378892135, 'USA'),
 	('81567044', 'Next in Fashion',                 'Series',   'Reality',              NULL,                       NULL,                   'English',   NULL,                      'The Oldschool',                    'TV-14',   9765445340, 'USA'),
 	('81589506', 'Physical 100',                    'Series',   'Korean',               'Competition Reality',      'Reality',              'Korean',    'Jang Ho-gi',              'MBC',                              'TV-14',   5114698442, 'Korea'),
-	('70296632', 'Hunter X Hunter',                 'Series',   'Japanese',             'Anime',                    'Based on Manga',       'Japanese',  NULL,                      'Nippon Animation',                 'TV-14',   8176537321, 'Japan');
+	('70296632', 'Hunter X Hunter',                 'Series',   'Japanese',             'Anime',                    'Based on Manga',       'Japanese',  NULL,                      'Nippon Animation',                 'TV-14',   8176537321, 'Japan'),
+	('81012921', 'Inventing Anna',                  'Series',   'Drama',                'Based on Real Life',       NULL,                   'English',   'Shonda Rhimes',           'Shondaland',                       'TV-MA',   6741239870, 'USA');
 
 
-select * from users;
+select * from item;
