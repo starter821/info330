@@ -21,7 +21,7 @@ create table item (
 	-- the Entertainment Identifier Registry, unique number
 	itemTitle varchar(300),
 	itemType varchar(100) check (
-		itemType in ('movie', 'TV show')
+		itemType in ('Movie', 'Series')
 	),
 	genre1 varchar(200) not null,
 	genre2 varchar(200),
@@ -32,6 +32,7 @@ create table item (
 	-- Genres can be null but genre1 cannot be null.
 	primaryLanguage varchar(200),
 	director varchar(200),
+	productionCompany varchar(200),
 	maturityRating varchar(10) check (
 		maturityRating in (
 			'TV-Y', 'TV-Y7', 'G', 'TV-G', 'PG', 'TV-PG',  -- Kids
@@ -39,7 +40,7 @@ create table item (
 			'R', 'TV-MA', 'NC-17'  -- Adults
 		)
 	),
-	viewCount int,
+	viewCount bigint,
 	country varchar(200),
 	UNIQUE (itemTitle, itemType)
 );
@@ -61,7 +62,7 @@ create table ratings (
 create table movies (
 	EIDR serial primary key,
 	itemTitle varchar(300) UNIQUE,
-	itemType varchar(100) check (itemType = 'movie'),
+	itemType varchar(100) check (itemType = 'Movie'),
 	movieLength time,
 	description text,
 	foreign key (EIDR)
@@ -73,7 +74,7 @@ create table movies (
 create table series (
 	EIDR serial primary key,
 	itemTitle varchar(300) UNIQUE,
-	itemType varchar(100) check (itemType = 'TV show'),
+	itemType varchar(100) check (itemType = 'Series'),
 	description text,
 	foreign key (EIDR)
 		references item(EIDR),
@@ -98,5 +99,5 @@ create table episodes (
 	primary key (itemTitle, episodeID, episodeTitle)
 );
 
-select * from episodes;
+select * from item;
 
