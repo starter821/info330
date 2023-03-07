@@ -1,9 +1,14 @@
--- Insert data and manipulate table information here
+-- -- Insert data and manipulate table information here
 
--- user
--- delete statement to clear tables and re-add values for the sake of testing output
--- don't copy into final project file
 -- delete from users;
+-- delete from series;
+-- delete from movies;
+-- delete from item;
+
+-- -- user
+-- -- delete statement to clear tables and re-add values for the sake of testing output
+-- -- don't copy into final project file
+-- -- delete from users;
 
 -- insert into users
 -- values
@@ -18,8 +23,10 @@
 -- 	(321098765, 'catdogmouse@email.com',                '04-11-2022', 'Basic',          'Canada'),
 -- 	(287487470, 'somesuperlongemailaddress@email.com',  '08-07-2019', 'Premium',        'Italy');
 
--- item
+-- -- item
 -- delete from item;
+
+-- -- select * from item;
 
 -- insert into item
 -- values
@@ -30,7 +37,7 @@
 -- 	('70295172', 'The Imitation Game',          'Movie', 'British',            'Movies Based on Real Life',  'Dramas',           'English',    'Morten Tyldum',      'Black Bear Pictures',    'PG-13',  7896573245,  'USA'),
 -- 	('70206672', 'The Hunger Games',            'Movie', 'Sci-Fi',             'Teen',                       'Based on Books',   'English',    'Gary Ross',          'Color Force Lionsgate',  'PG-13',  65495362875, 'USA'),
 	
--- 	-- series (10)
+-- 	-- series (11)
 -- 	('80020578', 'Breaking Bad',                    'Series',   'Crime',                'Thriller',                 'Dramas',               'English',   'Vince Gilligan',          'High Bridge Entertainment',        'TV-MA',   4275677345, 'USA'),
 -- 	('80061343', 'BoJack Horseman',                 'Series',   'Cartoons',             'Comedies',                 'Adult Animation',      'English',   'Raphael Bob-Waksberg',    'Tornante Television Boxer',        'TV-MA',   135875424,  'USA'),
 -- 	('81222255', 'First Love',                      'Series',   'Japanese',             'Romance',                  'Dramas',               'Japanese',  'Yuri Kanchiku',           'C&I Entertainment',                'TV-MA',   14235678,   'Japan'),
@@ -43,8 +50,8 @@
 -- 	('70296632', 'Hunter X Hunter',                 'Series',   'Japanese',             'Anime',                    'Based on Manga',       'Japanese',  NULL,                      'Nippon Animation',                 'TV-14',   8176537321, 'Japan'),
 -- 	('81012921', 'Inventing Anna',                  'Series',   'Drama',                'Based on Real Life',       NULL,                   'English',   'Shonda Rhimes',           'Shondaland',                       'TV-MA',   6741239870, 'USA');
 
--- movies
--- delete from movies;
+-- -- movies
+-- -- delete from movies;
 
 -- insert into movies
 -- values
@@ -54,7 +61,7 @@
 -- 	('70295172', 'The Imitation Game',          'Movie', '01:53:00', 'During World War II, a mathematician leads a team of cryptanalysts as they work feverishly to break the Germans’ notorious Enigma code.'),
 -- 	('70206672', 'The Hunger Games',            'Movie', '02:16:00', 'In a dystopian future, teens Katniss and Peeta are drafted for a televised event pitting young competitors against each other in a fight to the death.');
 	
--- series
+-- -- series
 -- delete from series;
 
 -- insert into series
@@ -69,8 +76,21 @@
 -- 	('81567044', 'Next in Fashion',                 'Series', 'Up-and-coming designers compete to impress expert judges, hoping to win career-changing prize money and a chance to become the next big thing in fashion.'),
 -- 	('81589506', 'Physical 100',                    'Series', 'One hundred contestants in top physical shape compete in a series of grueling challenges to claim the honor — and cash reward — as the last one standing.'),
 -- 	('70296632', 'Hunter X Hunter',                 'Series', 'To fulfill his dreams of becoming a legendary Hunter like his dad, a young boy must pass a rigorous examination and find his missing father.'),
--- 	('81012921', 'Inventing Anna',                  'Series', 'Audacious entrepreneur or con artist? A journalist chases down the story of Anna Delvey, who convinced New York’s elite she was a German heiress.');
+-- 	('81012921', 'Inventing Anna',                  'Series', 'Audacious entrepreneur or con artist? A journalist chases down the story of Anna Delvey, who convinced New York''s elite she was a German heiress.');
 
+-- -- -- movieRatings
+-- delete from movieRatings;
 
+-- select * from item
 
-select * from users;
+-- insert into movieRatings
+-- values
+-- 	('872563419', 'The Dark Knight', 'Movie', 'True', 'True' ),
+-- 	('872563419', 'This is Where I Leave You', 'Movie', 'True', 'False'),
+-- 	('443786521', 'The Dark Knight', 'Movie', 'True', 'False'),
+-- 	('443786521', 'The Imitation Game', 'Movie', 'True', 'True'),
+-- 	('987654321', 'The Hunger Games', 'Movie', 'False', 'False'),
+-- 	('246801357', 'This is Where I Leave you', 'Movie', 'True', 'True');
+	
+-- -- epRatings
+-- delete from epRatings
