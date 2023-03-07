@@ -1,8 +1,8 @@
 -- Create necessary tables for project here
 
 drop table if exists 
-	users, item, movieRatings, epRatings, movies,
-	series, season, episodes,
+	users, item, movieRatings, epRatings,
+	movies, series, season, episodes,
 	castMember, productionCompany;
 	
 
