@@ -26,7 +26,7 @@
 
 
 -- -- -- productionCompany
--- delete from productionCompany
+-- delete from productionCompany;
 
 -- insert into productionCompany
 -- values
@@ -135,7 +135,7 @@
 
 
 -- -- -- episodes
--- delete from episodes
+-- delete from episodes;
 
 -- insert into episodes
 -- values
@@ -161,7 +161,7 @@
 
 
 -- -- -- epRatings
--- delete from epRatings
+-- delete from epRatings;
 
 -- insert into epRatings
 -- values
@@ -204,3 +204,5 @@
 -- 	('Jella Haase', 'Jella Haase', 'Kleo', 'Series', 'Kleo'),
 -- 	('Tan France', 'Tan France', 'Next in Fashion', 'Series', 'host'),
 -- 	('Julia Garner', 'Julia Garner', 'Inventing Anna', 'Series', 'Anna Delvey');
+
+select * from users;

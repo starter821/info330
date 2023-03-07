@@ -1,33 +1,44 @@
 -- Write query manipulation here
 
-select * from users;
+select * from epRatings;;
 
 -- shiina's queries
 
 --- (1) When does my subscription renew ? (customer)
----     Let user ('my') be Shiina for the sake of the query
-select datejoined from users
-where email = 'shiinaaaa@email.com';
+---     Let user ('my') be shiinaaaa@email.com for the sake of the query
+-- select datejoined from users
+-- where email = 'shiinaaaa@email.com';
 
---- (2) How many users in Japan watched 'the Dark Knight' ? (Netflix analyst)
+-- --- (2) How many users in Japan watched 'the Dark Knight' ? (Netflix analyst)
+-- with combined as (
+-- 	select u.userid, email, country, itemTitle, watched
+-- 	from users u, movieRatings r
+-- 	where u.userid = r.userid
+-- ), japan as (
+-- 	select email, country, itemtitle, watched
+-- 	from combined
+-- 	where country = 'Japan'
+-- 		and itemtitle = 'The Dark Knight'
+-- 		and watched = true
+-- )
+-- select count(*) as num_people
+-- from japan;
+
+--- (3) What episode did I leave off on for the show 'Breaking Bad' ? (customer)
+---     Let user ('I') be shiinaaaa@email.com for the sake of the query.
+---     Returns the last episode watched
 with combined as (
-	select u.userid, email, country, itemTitle, watched
-	from users u, movieRatings r
+	select email, itemtitle, seasonid, episodeid, watched
+	from users u, epRatings r
 	where u.userid = r.userid
-), japan as (
-	select email, country, itemtitle, watched
+), shiina as (
+	select *
 	from combined
-	where country = 'Japan'
-		and itemtitle = 'The Dark Knight'
-		and watched = true
+	where email = 'shiinaaaa@email.com'
 )
-select count(*) as num_people
-from japan;
-
---- (3) What episode did I leave off on for the show 'Physical 100' ? (customer)
----     Let user ('I') be Shiina for the sake of the query.
----     Return the next episode to watch
-
+select itemtitle, seasonid, max(episodeid) as last_ep_watched from shiina
+where itemtitle = 'Breaking Bad'
+group by itemtitle, seasonid;
 
 -- Jiyoon's queries
 
