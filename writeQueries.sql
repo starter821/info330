@@ -18,10 +18,25 @@ where email = 'shiinaaaa@email.com';
 
 -- Jiyoon's queries
 
--- (15) What is the percentage of premium subscriptions among users in USA? (Netflix analyst)
-select 
+-- (7) How many people joined Netflix in 2022?
+with year as(
+	select userID, email, extract(year from dateJoined) as yearJoined
+	from users
+)
+select count(*)
+from users u, year y
+where u.userid = y.userid and u.email = y.email
+	and y.yearjoined = 2022;
 
--- (20) What movies and TV shows have maturity ratings that are appropriate for children? (customer)
+
+-- (8) How many people has premium subscriptions among users in USA? (Netflix analyst)
+select subscriptionType, count(*) as num
+from users
+where country = 'USA'
+group by subscriptionType
+order by num desc;
+
+-- (9) What movies and TV shows have maturity ratings that are appropriate for children? (customer)
 select itemTitle, itemType, genre1, primaryLanguage, maturityRating
 from item
 where maturityRating = 'TV-Y'
@@ -31,12 +46,10 @@ where maturityRating = 'TV-Y'
     or maturityRating = 'PG'
     or maturityRating = 'TV-PG';
 
--- (21) What are some movies that Leonardo DiCaprio starred in? (customer)
-with ci as (
-    from cast c join item i
-    where c.itemTitle = i.itemTitle and c.itemType = i.itemType
-)
-select item, genre1, genre2, genre3, primaryLanguage, maturityRating
-from ci
-where ci.stageName = 'Leonardo DiCaprio'
-    and ci.itemType = 'Movie';
+-- (10) What are some movies that Christian Bale starred in? (customer)
+select cm.itemTitle, i.genre1, i.genre2, i.genre3, i.primaryLanguage, i.maturityRating
+from castMember cm, item i
+where cm.itemTitle = i.itemTitle
+	and cm.itemType = i.itemType
+	and cm.stageName = 'Christian Bale'
+	and i.itemType = 'Movie';
