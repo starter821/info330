@@ -97,3 +97,14 @@
 -- insert into season
 -- values
 -- 	('')
+
+
+
+-- castMember
+-- delete from castMember;
+
+-- insert into castMember
+-- values ()
+
+
+-- select * from users;
