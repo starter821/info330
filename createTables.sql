@@ -19,6 +19,13 @@ create table users (
 	country varchar(100)
 );
 
+create table productionCompany (
+	name varchar(200) primary key,
+	country varchar(200),
+	DateFounded date
+);
+
+
 create table item (
 	EIDR serial primary key,
 	-- the Entertainment Identifier Registry, unique number
@@ -35,7 +42,7 @@ create table item (
 	-- Genres 2 & 3 can be null but genre 1 cannot be null.
 	primaryLanguage varchar(200),
 	director varchar(200),
-	productionCompany varchar(200),
+	productionCompany varchar(200) references productionCompany(name),
 	maturityRating varchar(10) check (
 		maturityRating in (
 			'TV-Y', 'TV-Y7', 'G', 'TV-G', 'PG', 'TV-PG',  -- Kids
@@ -112,7 +119,7 @@ create table epRatings (
 	itemTitle varchar(300),
 	itemType varchar(100) check (itemType = 'Series'),
 	seasonID smallint,
-	episodeID smallint UNIQUE,
+	episodeID smallint,
 	watched boolean,
 	rating boolean,
 	-- rating true = thumbs up, rating false = thumbs down, null = no vote
@@ -130,13 +137,6 @@ create table castMember (
 	primary key (stageName, name),
 	foreign key (itemTitle, itemType) references item(itemTitle, itemType)
 );
-
-create table productionCompany (
-	name varchar(200) primary key,
-	country varchar(200),
-	DateFounded date
-);
-
 
 
 
