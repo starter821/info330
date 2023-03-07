@@ -104,7 +104,21 @@
 -- delete from castMember;
 
 -- insert into castMember
--- values ()
-
+-- values 
+-- 	('Christian Bale', 'Christian Bale', 'The Dark Knight', 'Movie', 'Batman/Bruce Wayne'),
+-- 	('Heath Ledger', 'Heath Ledger', 'The Dark Knight', 'Movie', 'Joker'),
+-- 	('Jason Bateman', 'Jason Bateman', 'This is Where I Leave You', 'Movie', 'Judd Altman'),
+-- 	('Tina Fey', 'Tina Fey', 'This is Where I Leave You', 'Movie', 'Wendy Altman'),
+-- 	('Harshvardhan Rane', 'Harshvardhan Rane', 'Tara Vs. Bilal', 'Movie', 'Advocate Bilal "Billu" Khan'),
+-- 	('Sonia Rathee', 'Sonia Rathee', 'Tara Vs. Bilal', 'Movie', 'Tara Kaul Sharma Khan'),
+-- 	('Benedict Cumberbatch', 'Benedict Cumberbatch', 'The Imitation Game', 'Movie', 'Alan Turing'),
+-- 	('Jennifer Lawrence', 'Jennifer Lawrence', 'The Hunger Games', 'Movie', 'Katniss Everdeen'),
+-- 	('Bryan Cranston', 'Bryan Cranston', 'Breaking Bad', 'Series', 'Walter White'),
+-- 	('Hikari Mitsushima', 'Hikari Mitsushima', 'First Love', 'Series', 'Yae Noguchi'),
+-- 	('Penn Badgley', 'Penn Badgley', 'You', 'Series', 'Joe Goldberg'),
+-- 	('Chase Stokes', 'Chase Stokes', 'Outer Banks', 'Series', 'John B. Routledge'),
+-- 	('Jella Haase', 'Jella Haase', 'Kleo', 'Series', 'Kleo'),
+-- 	('Tan France', 'Tan France', 'Next in Fashion', 'Series', 'host'),
+-- 	('Julia Garner', 'Julia Garner', 'Inventing Anna', 'Series', 'Anna Delvey');
 
 -- select * from users;
