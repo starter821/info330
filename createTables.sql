@@ -133,6 +133,7 @@ create table castMember (
 
 create table productionCompany (
 	name varchar(200) primary key,
+	country varchar(200),
 	DateFounded date
 );
 
