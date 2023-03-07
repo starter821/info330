@@ -1,7 +1,3 @@
--- This is the official file we'll submit. Copy and paste material from
--- createTables, editTables, and writeQueries that we want to submit into 
--- this file.
-
 -- Project Assignment 4: Database Manipulation
 -- Group 16 Section BB
 -- Shiina Sugioka, Jiyoon Kim, Sunghee Park
@@ -148,6 +144,8 @@ create table castMember (
 
 -- Q2 -------------------------------------------------------------------------------------
 
+-- Shiina
+
 -- (1) When does my subscription renew ? (customer)
 ---    Let user ('my') be shiinaaaa@email.com for the sake of the query
 select datejoined from users
@@ -184,6 +182,8 @@ select itemtitle, seasonid, max(episodeid) as last_ep_watched from shiina
 where itemtitle = 'Breaking Bad'
 group by itemtitle, seasonid;
 
+-- Jiyoon
+
 -- (4) How many people joined Netflix in 2022?
 with year as(
 	select userID, email, extract(year from dateJoined) as yearJoined
@@ -218,6 +218,8 @@ where cm.itemTitle = i.itemTitle
 	and cm.itemType = i.itemType
 	and cm.stageName = 'Christian Bale'
 	and i.itemType = 'Movie';
+
+-- Sunghee
 
 -- Q3 -------------------------------------------------------------------------------------
 
