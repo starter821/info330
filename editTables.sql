@@ -78,19 +78,22 @@
 -- 	('70296632', 'Hunter X Hunter',                 'Series', 'To fulfill his dreams of becoming a legendary Hunter like his dad, a young boy must pass a rigorous examination and find his missing father.'),
 -- 	('81012921', 'Inventing Anna',                  'Series', 'Audacious entrepreneur or con artist? A journalist chases down the story of Anna Delvey, who convinced New York''s elite she was a German heiress.');
 
--- -- -- movieRatings
+-- -- movieRatings
 -- delete from movieRatings;
-
--- select * from item
 
 -- insert into movieRatings
 -- values
--- 	('872563419', 'The Dark Knight', 'Movie', 'True', 'True' ),
--- 	('872563419', 'This is Where I Leave You', 'Movie', 'True', 'False'),
--- 	('443786521', 'The Dark Knight', 'Movie', 'True', 'False'),
--- 	('443786521', 'The Imitation Game', 'Movie', 'True', 'True'),
--- 	('987654321', 'The Hunger Games', 'Movie', 'False', 'False'),
--- 	('246801357', 'This is Where I Leave you', 'Movie', 'True', 'True');
+-- 	('872563419', 'The Dark Knight', 		   'Movie', 'True',  'True' ),
+-- 	('872563419', 'This is Where I Leave You', 'Movie', 'True',  'False'),
+-- 	('443786521', 'The Dark Knight', 		   'Movie', 'True',  'False'),
+-- 	('443786521', 'The Imitation Game', 	   'Movie', 'True',  'True'),
+-- 	('987654321', 'The Hunger Games', 		   'Movie', 'False', 'False'),
+-- 	('246801357', 'This is Where I Leave You', 'Movie', 'True',  'True');
 	
--- -- epRatings
--- delete from epRatings
+
+-- -- season
+-- delete from season;
+
+-- insert into season
+-- values
+-- 	('')
