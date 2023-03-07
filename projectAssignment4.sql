@@ -6,10 +6,10 @@
 -- Group 16 Section BB
 -- Shiina Sugioka, Jiyoon Kim, Sunghee Park
 
--- Q0
+-- Q0 -------------------------------------------------------------------------------------
 -- shiina12
 
--- Q1
+-- Q1 -------------------------------------------------------------------------------------
 drop table if exists 
 	users, item, movieRatings, epRatings, 
 	movies, series, season, episodes, 
@@ -27,6 +27,13 @@ create table users (
 	country varchar(100)
 );
 
+create table productionCompany (
+	name varchar(200) primary key,
+	country varchar(200),
+	DateFounded date
+);
+
+
 create table item (
 	EIDR serial primary key,
 	-- the Entertainment Identifier Registry, unique number
@@ -43,7 +50,7 @@ create table item (
 	-- Genres 2 & 3 can be null but genre 1 cannot be null.
 	primaryLanguage varchar(200),
 	director varchar(200),
-	productionCompany varchar(200),
+	productionCompany varchar(200) references productionCompany(name),
 	maturityRating varchar(10) check (
 		maturityRating in (
 			'TV-Y', 'TV-Y7', 'G', 'TV-G', 'PG', 'TV-PG',  -- Kids
@@ -120,7 +127,7 @@ create table epRatings (
 	itemTitle varchar(300),
 	itemType varchar(100) check (itemType = 'Series'),
 	seasonID smallint,
-	episodeID smallint UNIQUE,
+	episodeID smallint,
 	watched boolean,
 	rating boolean,
 	-- rating true = thumbs up, rating false = thumbs down, null = no vote
@@ -139,14 +146,108 @@ create table castMember (
 	foreign key (itemTitle, itemType) references item(itemTitle, itemType)
 );
 
-create table productionCompany (
-	name varchar(200) primary key,
-	country varchar(200),
-	DateFounded date
-);
+-- Q2 -------------------------------------------------------------------------------------
 
+-- (1) When does my subscription renew ? (customer)
+---    Let user ('my') be shiinaaaa@email.com for the sake of the query
+select datejoined from users
+where email = 'shiinaaaa@email.com';
 
--- Q2
+--- (2) How many users in Japan watched 'the Dark Knight' ? (Netflix analyst)
+with combined as (
+	select u.userid, email, country, itemTitle, watched
+	from users u, movieRatings r
+	where u.userid = r.userid
+), japan as (
+	select email, country, itemtitle, watched
+	from combined
+	where country = 'Japan'
+		and itemtitle = 'The Dark Knight'
+		and watched = true
+)
+select count(*) as num_people
+from japan;
 
--- Q3
+--- (3) What episode did I leave off on for the show 'Breaking Bad' ? (customer)
+---     Let user ('I') be shiinaaaa@email.com for the sake of the query.
+---     Returns the last episode watched
+with combined as (
+	select email, itemtitle, seasonid, episodeid, watched
+	from users u, epRatings r
+	where u.userid = r.userid
+), shiina as (
+	select *
+	from combined
+	where email = 'shiinaaaa@email.com'
+)
+select itemtitle, seasonid, max(episodeid) as last_ep_watched from shiina
+where itemtitle = 'Breaking Bad'
+group by itemtitle, seasonid;
+
+-- (4) How many people joined Netflix in 2022?
+with year as(
+	select userID, email, extract(year from dateJoined) as yearJoined
+	from users
+)
+select count(*)
+from users u, year y
+where u.userid = y.userid and u.email = y.email
+	and y.yearjoined = 2022;
+	
+-- (5) How many people has premium subscriptions among users in USA? (Netflix analyst)
+select subscriptionType, count(*) as num
+from users
+where country = 'USA'
+group by subscriptionType
+order by num desc;
+
+-- (6) What movies and TV shows have maturity ratings that are appropriate for children? (customer)
+select itemTitle, itemType, genre1, primaryLanguage, maturityRating
+from item
+where maturityRating = 'TV-Y'
+    or maturityRating = 'TV-Y7'
+    or maturityRating = 'G'
+    or maturityRating = 'TV-G'
+    or maturityRating = 'PG'
+    or maturityRating = 'TV-PG';
+
+-- (7) What are some movies that Christian Bale starred in? (customer)
+select cm.itemTitle, i.genre1, i.genre2, i.genre3, i.primaryLanguage, i.maturityRating
+from castMember cm, item i
+where cm.itemTitle = i.itemTitle
+	and cm.itemType = i.itemType
+	and cm.stageName = 'Christian Bale'
+	and i.itemType = 'Movie';
+
+-- Q3 -------------------------------------------------------------------------------------
+
+-- Shiina
+--- (3) What episode did I leave off on for the show 'Breaking Bad' ? (customer)
+---     Let user ('I') be shiinaaaa@email.com for the sake of the query.
+---     Returns the last episode watched
+with combined as (
+	select email, itemtitle, seasonid, episodeid, watched
+	from users u, epRatings r
+	where u.userid = r.userid
+), shiina as (
+	select *
+	from combined
+	where email = 'shiinaaaa@email.com'
+)
+select itemtitle, seasonid, max(episodeid) as last_ep_watched from shiina
+where itemtitle = 'Breaking Bad'
+group by itemtitle, seasonid;
+
+-- Jiyoon
+-- (4) How many people joined Netflix in 2022?
+with year as(
+	select userID, email, extract(year from dateJoined) as yearJoined
+	from users
+)
+select count(*)
+from users u, year y
+where u.userid = y.userid and u.email = y.email
+	and y.yearjoined = 2022;
+
+-- Sunghee
 
