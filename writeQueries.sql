@@ -6,7 +6,7 @@ select * from users;
 
 --- (1) When does my subscription renew ? (customer)
 ---     Let user ('my') be Shiina for the sake of the query
-select email, datejoined from users
+select datejoined from users
 where email = 'shiinaaaa@email.com';
 
 --- (2) How many users in Japan watched 'the Dark Knight' ? (Netflix analyst)
