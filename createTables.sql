@@ -4,6 +4,8 @@ drop table if exists
 	users, item, movieRatings, epRatings, movies,
 	series, season, episodes,
 	castMember, productionCompany;
+	
+
 
 create table users (
 	userID serial primary key,
@@ -58,6 +60,7 @@ create table movies (
 		references item(itemTitle, itemType)
 );
 
+
 create table series (
 	EIDR serial primary key,
 	itemTitle varchar(300) UNIQUE,
@@ -83,21 +86,24 @@ create table movieRatings (
 		references item(itemTitle, itemType)
 );
 
+
 create table season (
 	itemTitle varchar(300) references series(itemTitle),
 	seasonID smallint,
 	seasonTitle varchar(200),
-	primary key (itemTitle, seasonID, seasonTitle)
+	primary key (itemTitle, seasonID)
 );
 
 create table episodes (
-	itemTitle varchar(300) references season(itemTitle),
-	seasonID smallint references season(seasonID),
+	itemTitle varchar(300),
+	seasonID smallint,
 	episodeID smallint,
 	episodeTitle varchar(200),
 	description text,
 	episodeLength time,
-	primary key (itemTitle, episodeID, episodeTitle)
+	foreign key (itemTitle, seasonID)
+		references season(itemTitle, seasonID),
+	primary key (itemTitle, seasonID, episodeID, episodeTitle)
 );
 
 -- Ratings for each episode of a series

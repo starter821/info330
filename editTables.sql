@@ -96,15 +96,19 @@
 
 -- insert into season
 -- values
--- 	('Breaking Bad', '1', 'Season 1'),
--- 	('Breaking Bad', '2', 'Season 2'),
--- 	('Breaking Bad', '3', 'Season 3'),
--- 	('Breaking Bad', '4', 'Season 4'),
--- 	('Breaking Bad', '5', 'Season 5'),
--- 	('Outer Banks',  '1', 'Season 1'),
---	('Outer Banks',  '2', 'Season 2'),
--- 	('Outer Banks',  '3', 'Season 3'),
---  ('')
+-- 	('Breaking Bad',    '1', 'Season 1'),
+-- 	('Breaking Bad',    '2', 'Season 2'),
+-- 	('Breaking Bad',    '3', 'Season 3'),
+-- 	('Breaking Bad',    '4', 'Season 4'),
+-- 	('Breaking Bad',    '5', 'Season 5'),
+-- 	('First Love', 	    '1', 'Season 1'),
+-- 	('Outer Banks',     '1', 'Season 1'),
+-- 	('Outer Banks',     '2', 'Season 2'),
+-- 	('Outer Banks',     '3', 'Season 3'),
+-- 	('Next in Fashion', '1', 'Season 1'),
+-- 	('Next in Fashion', '2', 'Season 2'),
+-- 	('Inventing Anna',  '1', 'Season 1');
+
 
 
 -- -- episodes
@@ -112,11 +116,25 @@
 
 -- insert into episodes
 -- values
--- 	('Breaking Bad', '1', '1', 'Pilot', 					  'Diagnosed with terminal lung cancer, a high school chemistry teacher resorts to cooking and selling methamphetamine to provide for his family.',    '00:58:17'),
--- 	('Breaking Bad', '1', '2', 'The Cat''s in the Bag', 	  'Their first aborted drug deal forces Walt and Jesse to dispose of a pair of corpses. Meanwhile, Skyler suspects that her husband is up to no good.' '00:48:22'),
--- 	('Breaking Bad', '1', '3', 'And the Bag''s in the River', 'As Walt cleans up the mess that was left after his first drug deal, Skyler gets too close to the truth about his double life.', 					   '00:48:22'),
---	('Breaking Bad', '2', '1', 'Seven Thirty-Seven', 'As they lay plans for their final big drug deals, Walt and Jesse worry that their sole buyer will think nothing of killing them when it suits him.'		   '00:47:23'),
-
+-- 	('Breaking Bad',     '1', '1', 'Pilot', 					     'Diagnosed with terminal lung cancer, a high school chemistry teacher resorts to cooking and selling methamphetamine to provide for his family.',           '00:58:17'),
+-- 	('Breaking Bad',     '1', '2', 'The Cat''s in the Bag', 	     'Their first aborted drug deal forces Walt and Jesse to dispose of a pair of corpses. Meanwhile, Skyler suspects that her husband is up to no good.',       '00:48:22'),
+-- 	('Breaking Bad',     '1', '3', 'And the Bag''s in the River',    'As Walt cleans up the mess that was left after his first drug deal, Skyler gets too close to the truth about his double life.', 					         '00:48:22'),
+-- 	('Breaking Bad',     '2', '1', 'Seven Thirty-Seven', 			 'As they lay plans for their final big drug deals, Walt and Jesse worry that their sole buyer will think nothing of killing them when it suits him.',       '00:47:23'),
+-- 	('Breaking Bad',     '2', '2', 'Grilled', 				     	 'As a DEA manhunt for Tuco gets under way, Skyler enlists Hank in the search for Walt.',                         										     '00:48:36'),
+-- 	('First Love',	     '1', '1', 'When the Lilacs Bloom',	     	 'Yae drives through the streets of Sapporo as a taxi driver. Back in her rural hometown, her younger self dreams of becoming a flight attendant.',          '00:52:45'),
+-- 	('First Love',       '1', '2', 'Your Voice',				     'A teenage Yae shyly plans a date with Harumichi. In the present, she receives a sweet gift from a special someone.', 							   	         '00:49:07'),
+-- 	('First Love',	     '1', '3', 'Napolitan', 				     'Back in 2001, Yae moves to a tiny apartment in Tokyo, while Harumichi trains with the Air Defense Force. Tsuzuru can’t seem to take his mind off Uta.',    '00:50:56'),
+-- 	('Outer Banks',      '2', '1', 'The Gold',					 	 'John B tries to evade capture as he zeroes in on the gold, but a promise to Sarah could derail his plans. Back home, his friends face life without him.',  '00:51:04'),
+--  	('Outer Banks',      '2', '2', 'The Heist',					 	 'With time running out, John B and Sarah strike an uneasy bargain, while Kiara, JJ and Pope search for evidence that could implicate Ward and Rafe', 	     '00:45:13'),
+--  	('Outer Banks',      '2', '3', 'Prayers',				     	 'A desperate scramble for help lands John B and Sarah in questionable surroundings. Pope receives a mysterious summons to an out-of-town meeting.',         '00:48:51'),
+-- 	('Next in Fashion',  '1', '1', 'Red Carpet',                  	 'In it to win it, 18 designers pair up to concoct fabulous red-carpet looks. Will they go glam or "hooch-wench" for Monique Lhuillier and Eva Chen?',       '00:49:14'),
+-- 	('Next in Fashion',  '1', '2', 'Prints & Patterns',			 	 'Go big and bold — or go home? Prints polarize the contestants as they break out new patterns and reflect on their origins with judge Prabal Gurung.',      '00:49:46'),
+--  	('Next in Fashion',  '2', '1', 'Royalty', 					 	 'Twelve designers settle into the workroom to create royalty-inspired looks, hoping to be crowned the winner by fashion industry icon Donatella Versace.',  '00:46:27'),
+--  	('Next in Fashion',  '2', '2', 'Wear The Earth',              	 'Two teams let their imaginations bloom to make living looks that incorporate flowers and plants for supermodel judge Helena Christensen.',                 '00:47:31'),
+-- 	('Inventing Anna',   '1', '1', 'Life of a VIP',					 'Reporter Vivian Kent defies her editor to pursue the story of Anna Delvey, an alleged German heiress indicted for grand larceny and jailed without bail.', '01:04:54'),
+-- 	('Inventing Anna',   '1', '2', 'The Devil Wore Anna',        	 'From a yacht off Ibiza to a suite at Paris Fashion Week, Anna''s glamorous lifestyle comes into focus as her former friends dish out details to Vivian.',  '01:07:41'),
+-- 	('Inventing Anna',   '1', '3', 'Two Birds, One Throne', 		 'With Anna giving her the cold shoulder, Vivian hunts down sources who can fill in the blanks: Anna''s ex-boyfriend Chase and wealthy entrepreneur Nora.',  '01:05:15'),
+-- 	('Inventing Anna',   '1', '4', 'A Wolf in Chick Clothing',		 'Vivian investigates how Anna persuaded powerful Manhattan lawyer Alan Reed to help her secure millions in funding for her ambitious business venture.',    '00:59:08');
 
 
 -- castMember
