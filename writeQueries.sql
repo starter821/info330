@@ -18,8 +18,25 @@ where email = 'shiinaaaa@email.com';
 
 -- Jiyoon's queries
 
--- (15) What is the percentage of premium subscriptions among users? (Netflix analyst)
+-- (15) What is the percentage of premium subscriptions among users in USA? (Netflix analyst)
+select 
 
--- (20) What shows have maturity ratings that are appropriate for children? (customer)
+-- (20) What movies and TV shows have maturity ratings that are appropriate for children? (customer)
+select itemTitle, itemType, genre1, primaryLanguage, maturityRating
+from item
+where maturityRating = 'TV-Y'
+    or maturityRating = 'TV-Y7'
+    or maturityRating = 'G'
+    or maturityRating = 'TV-G'
+    or maturityRating = 'PG'
+    or maturityRating = 'TV-PG';
 
 -- (21) What are some movies that Leonardo DiCaprio starred in? (customer)
+with ci as (
+    from cast c join item i
+    where c.itemTitle = i.itemTitle and c.itemType = i.itemType
+)
+select item, genre1, genre2, genre3, primaryLanguage, maturityRating
+from ci
+where ci.stageName = 'Leonardo DiCaprio'
+    and ci.itemType = 'Movie';
