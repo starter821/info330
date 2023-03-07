@@ -84,15 +84,16 @@ create table movieRatings (
 );
 
 create table season (
-	itemTitle varchar(300) UNIQUE references series(itemTitle),
-	seasonID smallint UNIQUE,
+	itemTitle varchar(300) references series(itemTitle),
+	seasonID smallint,
 	seasonTitle varchar(200),
 	primary key (itemTitle, seasonID, seasonTitle)
 );
 
 create table episodes (
-	itemTitle varchar(300) UNIQUE references season(itemTitle),
-	episodeID smallint UNIQUE,
+	itemTitle varchar(300) references season(itemTitle),
+	seasonID smallint references season(seasonID),
+	episodeID smallint,
 	episodeTitle varchar(200),
 	description text,
 	episodeLength time,
@@ -133,4 +134,6 @@ create table productionCompany (
 
 
 select * from epRatings;
+
+
 

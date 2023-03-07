@@ -96,7 +96,26 @@
 
 -- insert into season
 -- values
--- 	('')
+-- 	('Breaking Bad', '1', 'Season 1'),
+-- 	('Breaking Bad', '2', 'Season 2'),
+-- 	('Breaking Bad', '3', 'Season 3'),
+-- 	('Breaking Bad', '4', 'Season 4'),
+-- 	('Breaking Bad', '5', 'Season 5'),
+-- 	('Outer Banks',  '1', 'Season 1'),
+--	('Outer Banks',  '2', 'Season 2'),
+-- 	('Outer Banks',  '3', 'Season 3'),
+--  ('')
+
+
+-- -- episodes
+-- delete from episodes
+
+-- insert into episodes
+-- values
+-- 	('Breaking Bad', '1', '1', 'Pilot', 					  'Diagnosed with terminal lung cancer, a high school chemistry teacher resorts to cooking and selling methamphetamine to provide for his family.',    '00:58:17'),
+-- 	('Breaking Bad', '1', '2', 'The Cat''s in the Bag', 	  'Their first aborted drug deal forces Walt and Jesse to dispose of a pair of corpses. Meanwhile, Skyler suspects that her husband is up to no good.' '00:48:22'),
+-- 	('Breaking Bad', '1', '3', 'And the Bag''s in the River', 'As Walt cleans up the mess that was left after his first drug deal, Skyler gets too close to the truth about his double life.', 					   '00:48:22'),
+--	('Breaking Bad', '2', '1', 'Seven Thirty-Seven', 'As they lay plans for their final big drug deals, Walt and Jesse worry that their sole buyer will think nothing of killing them when it suits him.'		   '00:47:23'),
 
 
 
@@ -121,4 +140,4 @@
 -- 	('Tan France', 'Tan France', 'Next in Fashion', 'Series', 'host'),
 -- 	('Julia Garner', 'Julia Garner', 'Inventing Anna', 'Series', 'Anna Delvey');
 
--- select * from users;
+
