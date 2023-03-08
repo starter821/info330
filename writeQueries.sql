@@ -1,6 +1,6 @@
 -- Write query manipulation here
 
-select * from epRatings;;
+select * from epRatings;
 
 -- shiina's queries
 
